@@ -1,7 +1,7 @@
 package homework.hw01.synthesizer;
 import java.util.Iterator;
 
-public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T>  {
+public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> implements Iterable<T> {
     /* Index for the next dequeue or peek. */
     private int first;            // index for the next dequeue or peek
     /* Index for the next enqueue. */
@@ -70,5 +70,32 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T>  {
         fillCount = 0;
     }
 
-    // TODO: When you get to part 5, implement the needed code to support iteration.
+    public Iterator<T> iterator()
+    {
+        return new QueueIterator();
+    }
+
+    private class QueueIterator implements Iterator<T>
+    {
+        private int nextPosition;
+        private int itemNumber = fillCount;
+        QueueIterator()
+        {
+            nextPosition = first;
+        }
+
+        public boolean hasNext()
+        {
+            return (itemNumber != 0);
+        }
+
+        public T next()
+        {
+            T nextMember = rb[nextPosition];
+            nextPosition = (nextPosition + 1) % capacity;
+            itemNumber -= 1;
+            return nextMember;
+        }
+    }
+
 }

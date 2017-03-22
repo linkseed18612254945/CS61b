@@ -89,7 +89,7 @@ public class ArrayMap<K, V> implements Map61B<K, V>, Iterable<K>
 		return size;
 	}
 
-	public Iterator iterator()
+	public Iterator<K> iterator()
 	{
 		return new KeyIterator();
 	}

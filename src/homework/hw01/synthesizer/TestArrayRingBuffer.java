@@ -1,5 +1,8 @@
 package homework.hw01.synthesizer;
 import org.junit.Test;
+
+import java.util.Iterator;
+
 import static org.junit.Assert.*;
 
 /** Tests the ArrayRingBuffer class.
@@ -9,7 +12,7 @@ import static org.junit.Assert.*;
 public class TestArrayRingBuffer {
     @Test
     public void ArrayRingTest() {
-        ArrayRingBuffer<Integer> arb = new ArrayRingBuffer<>(3);
+        BoundedQueue<Integer> arb = new ArrayRingBuffer<>(3);
         arb.enqueue(20);
         arb.enqueue(10);
         arb.enqueue(1);
@@ -18,6 +21,10 @@ public class TestArrayRingBuffer {
         assertEquals(10, (int) arb.peek());
         arb.enqueue(3);
         assertEquals(10, (int) arb.peek());
+        for (Integer e: arb)
+        {
+            System.out.println(e);
+        }
     }
 
     /** Calls tests for ArrayRingBuffer. */
