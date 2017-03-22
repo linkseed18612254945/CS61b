@@ -12,7 +12,7 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> implements Itera
     /**
      * Create a new ArrayRingBuffer with the given capacity.
      */
-    public ArrayRingBuffer(int capacity)
+    ArrayRingBuffer(int capacity)
     {
         first = 0;
         last = 0;
