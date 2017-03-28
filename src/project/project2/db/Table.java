@@ -5,6 +5,7 @@ import simpleTools.EasyString;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 /**
  * Created by 51694 on 2017/3/27.
@@ -22,6 +23,7 @@ public class Table
     {
         tableName = name;
         colNum = colNames.length;
+        rowNum = 0;
         this.colNames = colNames;
         this.colTypes = colTypes;
         columns = new Column[colNum];
@@ -53,6 +55,25 @@ public class Table
             }
         }
     }
+
+    public String getTableName()
+    {
+        return tableName;
+    }
+
+    public void insertRow(String[] values)
+    {
+        if (values.length != colNum)
+        {
+            throw new ArrayIndexOutOfBoundsException("Insert with wrong column number.");
+        }
+        for (int i = 0; i < colNum; i += 1)
+        {
+            columns[i].insert(values[i]);
+        }
+    }
+
+
 
     public String getColNames()
     {

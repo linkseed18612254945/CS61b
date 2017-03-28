@@ -1,5 +1,7 @@
 package project.project2.db;
 
+import simpleTools.EasyString;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,5 +19,31 @@ public class Column<T>
         items = new ArrayList<>();
         name = colName;
         type = colType;
+    }
+
+    public void insert(String value)
+    {
+        try
+        {
+            if (type.equals("int"))
+            {
+                T valueWithRightType = (T) Integer.valueOf(value);
+                items.add(valueWithRightType);
+            }
+            else if(type.equals("float"))
+            {
+                T valueWithRightType = (T) Double.valueOf(value);
+                items.add(valueWithRightType);
+            }
+            else
+            {
+                items.add((T) value);
+            }
+        }
+        catch (ClassCastException e)
+        {
+            System.out.println("Wrong insert data type");
+            throw e;
+        }
     }
 }

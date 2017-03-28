@@ -14,4 +14,5 @@ public class EasyString
         }
         return joinString.trim();
     }
+
 }

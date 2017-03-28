@@ -127,14 +127,18 @@ public class Parse {
         System.out.printf("You are trying to drop the table named %s\n", name);
     }
 
-    private static void insertRow(String expr) {
+    private void insertRow(String expr)
+    {
         Matcher m = INSERT_CLS.matcher(expr);
-        if (!m.matches()) {
+        if (!m.matches())
+        {
             System.err.printf("Malformed insert: %s\n", expr);
             return;
         }
-
-        System.out.printf("You are trying to insert the row \"%s\" into the table %s\n", m.group(2), m.group(1));
+        String[] values = m.group(2).split(COMMA);
+        String tableName = m.group(1);
+        db.insertTable(tableName, values);
+        //System.out.printf("You are trying to insert the row \"%s\" into the table %s\n", m.group(2), m.group(1));
     }
 
     private void printTable(String name)

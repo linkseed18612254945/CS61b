@@ -1,5 +1,6 @@
 package project.project2.db;
 
+import javafx.scene.control.Tab;
 import project.project2.Parse;
 
 import java.util.HashMap;
@@ -18,6 +19,11 @@ public class Database {
         tables.put(tableName, t);
     }
 
+    public void insertTable(String tableName, String[] values)
+    {
+        Table inserted = tables.get(tableName);
+        inserted.insertRow(values);
+    }
     public void printTable(String name)
     {
         String tableString = "";
