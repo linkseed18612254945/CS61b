@@ -106,25 +106,28 @@ public class Parse {
             colNames[i] = cols[i].split(" ")[0];
             colTypes[i] = cols[i].split(" ")[1];
         }
-        Table newTable = new Table(name, colNames, colTypes);
-        db.addTable(name, newTable);
+        db.createTable(name, colNames, colTypes);
     }
 
-    private void createSelectedTable(String name, String exprs, String tables, String conds) {
+    private void createSelectedTable(String name, String exprs, String tables, String conds)
+    {
         System.out.printf("You are trying to create a table named %s by selecting these expressions:" +
                 " '%s' from the join of these tables: '%s', filtered by these conditions: '%s'\n", name, exprs, tables, conds);
     }
 
-    private void loadTable(String name) {
-        System.out.printf("You are trying to load the table named %s\n", name);
+    private void loadTable(String name)
+    {
+        db.loadTable(name);
     }
 
-    private void storeTable(String name) {
-        System.out.printf("You are trying to store the table named %s\n", name);
+    private void storeTable(String name)
+    {
+        db.storeTable(name);
     }
 
-    private void dropTable(String name) {
-        System.out.printf("You are trying to drop the table named %s\n", name);
+    private void dropTable(String name)
+    {
+        db.dropTable(name.trim());
     }
 
     private void insertRow(String expr)
@@ -138,7 +141,6 @@ public class Parse {
         String[] values = m.group(2).split(COMMA);
         String tableName = m.group(1);
         db.insertTable(tableName, values);
-        //System.out.printf("You are trying to insert the row \"%s\" into the table %s\n", m.group(2), m.group(1));
     }
 
     private void printTable(String name)

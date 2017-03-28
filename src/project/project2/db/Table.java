@@ -1,11 +1,7 @@
 package project.project2.db;
 
-import javafx.scene.control.Tab;
-import simpleTools.EasyString;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.NoSuchElementException;
+import simpleTools.EasyString;
 
 /**
  * Created by 51694 on 2017/3/27.
@@ -71,12 +67,33 @@ public class Table
         {
             columns[i].insert(values[i]);
         }
+        rowNum += 1;
     }
-
 
 
     public String getColNames()
     {
-        return EasyString.pyStyleJoin(colNames, ' ');
+        return EasyString.pyStyleJoin(colNames, ' ', colTypes, ',');
+    }
+
+    public String toString()
+    {
+        String tableString = "";
+        tableString += getColNames() + "\n";
+        for (int i = 0; i < rowNum; i += 1)
+        {
+            for (int j = 0; j < colNum; j += 1)
+            {
+                if (j == colNum - 1)
+                {
+                    tableString += columns[j].getItems().get(i);
+                    break;
+                }
+                tableString += columns[j].getItems().get(i) + ",";
+            }
+
+            tableString = tableString + "\n";
+        }
+        return tableString;
     }
 }

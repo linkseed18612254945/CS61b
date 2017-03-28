@@ -9,20 +9,70 @@ import org.junit.Test;
 public class unitTest
 {
     //@Test
-    public void createTest()
+    public void createNewTableTest()
     {
         Database db = new Database();
         db.transact("create table T1 (x int, y int)");
-        db.tables.get("T1");
-        db.printTable("T1");
+        db.transact("print T1");
     }
 
-    @Test
+    //@Test
+    public void createselectTableTest()
+    {
+        Database db = new Database();
+        db.transact("create table T1 (x int, y int)");
+    }
+
+    //@Test
     public void insertTest()
     {
         Database db = new Database();
         db.transact("create table T1 (x int, y int)");
         db.transact("insert into T1 values 2, 5 ");
+        db.transact("insert into T1 values 1, 3 ");
+        db.transact("print T1");
+    }
+
+    //@Test
+    public void storeTest()
+    {
+        Database db = new Database();
+        db.transact("create table T1 (x int, y int)");
+        db.transact("insert into T1 values 1, 10 ");
+        db.transact("insert into T1 values 1, 4 ");
+        db.transact("create table T2 (x int, z str)");
+        db.transact("insert into T2 values 2, beijing ");
+        db.transact("store T1");
+    }
+
+    //@Test
+    public void loadTest()
+    {
+        Database db = new Database();
+        db.transact("create table T1 (x int, z str)");
+        db.transact("insert into T1 values 2, beijing ");
+        db.transact("load T1");
+        db.transact("print T1");
+    }
+
+    //@Test
+    public void dropTest()
+    {
+        Database db = new Database();
+        db.transact("create table T1 (x int, z str)");
+        db.transact("insert into T1 values 2, beijing ");
+        db.transact("print T1");
+        db.transact("drop table T1 ");
+        db.transact("print T1");
+    }
+
+    //@Test
+    public void selectTest()
+    {
+        Database db = new Database();
+        db.transact("create table T1 (x int, z str)");
+        db.transact("insert into T1 values 2, beijing ");
+        db.transact("print T1");
     }
 
     public static void main()

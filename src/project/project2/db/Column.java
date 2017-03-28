@@ -20,9 +20,14 @@ public class Column<T>
         name = colName;
         type = colType;
     }
+    public List<T> getItems()
+    {
+        return items;
+    }
 
     public void insert(String value)
     {
+        value = value.trim();
         try
         {
             if (type.equals("int"))
