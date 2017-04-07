@@ -26,6 +26,11 @@ public class Database {
         tables.put(tableName, newTable);
     }
 
+    public void createTableBySelect(String tableName, String[] colNames, String[] selectedTableNames, String[] condition)
+    {
+
+    }
+
     public void insertTable(String tableName, String[] values)
     {
         Table t = tables.get(tableName);
@@ -102,6 +107,11 @@ public class Database {
         {
             e.printStackTrace();
         }
+    }
+
+    public void selectTables(String[] colExpressions, String[] joinTables, String[] condition)
+    {
+
     }
 
     public Map<String, Table> getTables()

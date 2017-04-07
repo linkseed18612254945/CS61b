@@ -14,7 +14,7 @@ public class MapTest
 		assertEquals(expected, (int) am.get(2));
 	}
 
-	@Test
+	//@Test
 	public void getTest()
 	{
 		Map61B<String, Integer> m = new ArrayMap<String, Integer>();
@@ -28,7 +28,7 @@ public class MapTest
 		assertEquals(null, actualNull);
 	}
 
-	@Test
+	//@Test
 	public void maxKeyTest()
 	{
 		Map61B<String, Integer> m = new ArrayMap<String, Integer>();
@@ -40,7 +40,7 @@ public class MapTest
 		assertEquals(expected, actual);
 	}
 
-	@Test
+	//@Test
 	public void maxValueTest()
 	{
 		Map61B<String, Integer> m = new ArrayMap<String, Integer>();

@@ -3,8 +3,7 @@ package lectureCode.lecture12and13;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
-import static org.junit.Assert.*;
-import org.junit.Test;
+
 
 public class ArrayMap<K, V> implements Map61B<K, V>, Iterable<K>
 {	

@@ -35,7 +35,7 @@ public class Table
                 Column<Integer> col = new Column<>(colNames[i], colTypes[i]);
                 columns[i] = col;
             }
-            else if (colTypes[i].equals("str"))
+            else if (colTypes[i].equals("string"))
             {
                 Column<String> col = new Column<>(colNames[i], colTypes[i]);
                 columns[i] = col;

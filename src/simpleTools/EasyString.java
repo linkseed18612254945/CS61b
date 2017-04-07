@@ -20,6 +20,19 @@ public class EasyString
         return joinString;
     }
 
+    public static boolean pyContain(String[] strings, String s)
+    {
+        for (String str:strings)
+        {
+            if (str.equals(s))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     public static String pyStyleJoin(String[] str1, Character pun1,  String[] str2, Character pun2)
     {
         String joinString = "";

@@ -2,9 +2,11 @@ package project.project2;
 
 import project.project2.db.Database;
 import project.project2.db.Table;
+import simpleTools.EasyString;
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+
 
 import java.util.StringJoiner;
 
@@ -15,6 +17,7 @@ public class Parse {
     private static final String REST  = "\\s*(.*)\\s*",
                                 COMMA = "\\s*,\\s*",
                                 AND   = "\\s+and\\s+";
+    private static final String[] COMPARATOR = new String[] {"==", "!=", "<", ">", "<=", ">="};
 
     // Stage 1 syntax, contains the command name.
     private static final Pattern CREATE_CMD = Pattern.compile("create table " + REST),
@@ -111,8 +114,15 @@ public class Parse {
 
     private void createSelectedTable(String name, String exprs, String tables, String conds)
     {
-        System.out.printf("You are trying to create a table named %s by selecting these expressions:" +
-                " '%s' from the join of these tables: '%s', filtered by these conditions: '%s'\n", name, exprs, tables, conds);
+        String[] colNames = exprs.split(",");
+        String[] selectedTables = tables.split(",");
+        String[] condition = conds.split(" ");
+        if (!EasyString.pyContain(COMPARATOR, condition[1]))
+        {
+            System.err.println("Unchecked comparator.");
+            return;
+        }
+        db.createTableBySelect(name, colNames, selectedTables, condition);
     }
 
     private void loadTable(String name)
@@ -148,18 +158,17 @@ public class Parse {
         db.printTable(name);
     }
 
-    private void select(String expr) {
+    private void select(String expr)
+    {
         Matcher m = SELECT_CLS.matcher(expr);
-        if (!m.matches()) {
+        if (!m.matches())
+        {
             System.err.printf("Malformed select: %s\n", expr);
             return;
         }
-
-        select(m.group(1), m.group(2), m.group(3));
-    }
-
-    private void select(String exprs, String tables, String conds) {
-        System.out.printf("You are trying to select these expressions:" +
-                " '%s' from the join of these tables: '%s', filtered by these conditions: '%s'\n", exprs, tables, conds);
+        String[] colExpressions = m.group(1).trim().split(",");
+        String[] joinTables = m.group(2).trim().split(",");
+        String[] condition = m.group(3).trim().split(" ");
+        db.selectTables(colExpressions, joinTables, condition);
     }
 }

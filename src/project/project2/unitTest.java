@@ -17,10 +17,14 @@ public class unitTest
     }
 
     //@Test
-    public void createselectTableTest()
+    public void createSelectTableTest()
     {
         Database db = new Database();
-        db.transact("create table T1 (x int, y int)");
+        db.transact("create table T1 (x int, y int, z string)");
+        db.transact("insert into T1 values 2, 5, good ");
+        db.transact("insert into T1 values 3, 1, nice ");
+        db.transact("insert into T1 values 4, 0, great ");
+        db.transact("create table T2 as select x,y from T1 where x >= y");
     }
 
     //@Test
@@ -40,7 +44,7 @@ public class unitTest
         db.transact("create table T1 (x int, y int)");
         db.transact("insert into T1 values 1, 10 ");
         db.transact("insert into T1 values 1, 4 ");
-        db.transact("create table T2 (x int, z str)");
+        db.transact("create table T2 (x int, z string)");
         db.transact("insert into T2 values 2, beijing ");
         db.transact("store T1");
     }
@@ -49,7 +53,7 @@ public class unitTest
     public void loadTest()
     {
         Database db = new Database();
-        db.transact("create table T1 (x int, z str)");
+        db.transact("create table T1 (x int, z string)");
         db.transact("insert into T1 values 2, beijing ");
         db.transact("load T1");
         db.transact("print T1");
@@ -59,20 +63,19 @@ public class unitTest
     public void dropTest()
     {
         Database db = new Database();
-        db.transact("create table T1 (x int, z str)");
+        db.transact("create table T1 (x int, z string)");
         db.transact("insert into T1 values 2, beijing ");
         db.transact("print T1");
         db.transact("drop table T1 ");
         db.transact("print T1");
     }
 
-    //@Test
+    @Test
     public void selectTest()
     {
         Database db = new Database();
-        db.transact("create table T1 (x int, z str)");
-        db.transact("insert into T1 values 2, beijing ");
-        db.transact("print T1");
+        db.transact("load fans");
+        db.transact("select Firstname,Lastname,TeamName from fans where Lastname >= 'Lee'");
     }
 
     public static void main()
