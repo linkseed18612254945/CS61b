@@ -1,7 +1,13 @@
 package project.project2.db;
 
 
-import simpleTools.EasyString;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import static simpleTools.EasyString.*;
 
 /**
  * Created by 51694 on 2017/3/27.
@@ -14,6 +20,8 @@ public class Table
     private String[] colNames;
     private String[] colTypes;
     private Column[] columns;
+    private Cursor cursor;
+    private Map<String, Column> nameColMap = new HashMap<>();
 
     public Table(String name, String[] colNames, String[] colTypes)
     {
@@ -23,7 +31,30 @@ public class Table
         this.colNames = colNames;
         this.colTypes = colTypes;
         columns = new Column[colNum];
+        cursor = new Cursor(this);
         createCols();
+    }
+
+    public Table(String name, Column[] cols)
+    {
+        tableName = name;
+        colNum = cols.length;
+        rowNum = cols[0].getRowNumber();
+        colNames = new String[cols.length];
+        colTypes = new String[cols.length];
+        cursor = new Cursor(this);
+        for (int i = 0; i < cols.length; i += 1)
+        {
+            nameColMap.put(cols[i].getName(), cols[i]);
+            colNames[i] = cols[i].getName();
+            colTypes[i] = cols[i].getType();
+        }
+        columns = cols;
+    }
+
+    public Column getColbyName(String colName)
+    {
+        return nameColMap.get(colName);
     }
 
     private void createCols()
@@ -34,16 +65,19 @@ public class Table
             {
                 Column<Integer> col = new Column<>(colNames[i], colTypes[i]);
                 columns[i] = col;
+                nameColMap.put(colNames[i], col);
             }
             else if (colTypes[i].equals("string"))
             {
                 Column<String> col = new Column<>(colNames[i], colTypes[i]);
                 columns[i] = col;
+                nameColMap.put(colNames[i], col);
             }
             else if (colTypes[i].equals("float"))
             {
                 Column<Float> col = new Column<>(colNames[i], colTypes[i]);
                 columns[i] = col;
+                nameColMap.put(colNames[i], col);
             }
             else
             {
@@ -70,10 +104,76 @@ public class Table
         rowNum += 1;
     }
 
+    private String[] sameCol(Table t)
+    {
+        return hashintersect(this.colNames, t.colNames);
+    }
+
+    private Table getCursorPointTable(Cursor cursor)
+    {
+        Column[] cursorCol = new Column[colNum];
+        for (int i = 0; i < colNum; i += 1)
+        {
+            cursorCol[i] = columns[i].getCursorColumn(cursor);
+        }
+        return new Table("tempTable", cursorCol);
+    }
+
+    private Table oneLineJoin(Table olTable, Table t, String[] joinColNames)
+    {
+        int rowN = t.getRowNum();
+        Column[] newCols = new Column[t.colNum + joinColNames.length];
+        System.arraycopy(t.columns, 0, newCols, 0, t.colNum);
+        for (int i = 0; i < joinColNames.length; i += 1)
+        {
+            Column joinCol = new Column<>(olTable.getColbyName(joinColNames[i]).getCursorItem(0), rowN);
+            newCols[t.colNum + i] = joinCol;
+        }
+        return new Table("join", newCols);
+    }
+
+    public Table join(Table t)
+    {
+        String[] sameColNames = sameCol(t);
+        if (sameColNames == null)
+        {
+            return null;
+        }
+        for (int i = 0; i < rowNum; i += 1)
+        {
+            cursor.setRowPosition(i);
+            cursor.setSelectRow(i);
+            List<Object> sourceRowSameColItems = cursor.rowInfo(sameColNames);
+            for (int j = 0; j < t.rowNum; j += 1)
+            {
+                t.cursor.setRowPosition(j);
+                List<Object> targetRowSameColItems = cursor.rowInfo(sameColNames);
+                if(sourceRowSameColItems.equals(targetRowSameColItems))
+                {
+                    cursor.addSelectRow(j);
+                }
+            }
+            if (t.cursor.selectRowsNumber() != 0)
+            {
+                String[] joinNames = colNames.re
+                Table tempOneLineJoinTable = oneLineJoin(getCursorPointTable(cursor), getCursorPointTable(t.cursor), joinNames);
+            }
+        }
+    }
+
+    public Table selectedTable()
+    {
+        Table newSelectTable = new Table()
+    }
 
     public String getColNames()
     {
-        return EasyString.pyStyleJoin(colNames, ' ', colTypes, ',');
+        return pyStyleJoin(colNames, ' ', colTypes, ',');
+    }
+
+    public int getRowNum()
+    {
+        return rowNum;
     }
 
     public String toString()

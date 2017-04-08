@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -111,7 +112,15 @@ public class Database {
 
     public void selectTables(String[] colExpressions, String[] joinTables, String[] condition)
     {
+        System.out.println(Arrays.toString(colExpressions));
 
+        System.out.println(Arrays.toString(condition));
+        Table[] selectTables = new Table[joinTables.length];
+        for (int i = 0; i < joinTables.length; i += 1)
+        {
+            selectTables[i] = tables.get(joinTables[i]);
+        }
+        System.out.println(selectTables[0].toString());
     }
 
     public Map<String, Table> getTables()

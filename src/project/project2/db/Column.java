@@ -13,16 +13,66 @@ public class Column<T>
     private String name;
     private String type;
     private List<T> items;
+    private int rowNumber;
 
     public Column(String colName, String colType)
     {
         items = new ArrayList<>();
         name = colName;
         type = colType;
+        rowNumber = 0;
     }
+
+    public Column(T item, int rowNumber)
+    {
+        name = "singleTemp";
+        items = new ArrayList<>();
+        type = item.getClass().toString();
+        this.rowNumber = rowNumber;
+        for (int i = 0; i < rowNumber; i += 1)
+        {
+            items.add(item);
+        }
+    }
+
     public List<T> getItems()
     {
         return items;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public String getType()
+    {
+        return type;
+    }
+
+    public int getRowNumber()
+    {
+        return rowNumber;
+    }
+
+    public Column getCursorColumn(Cursor cursor)
+    {
+        Column<T> newCol = new Column<>(name, type);
+        for (Integer index: cursor.getRowNumbers())
+        {
+            newCol.insert(items.get(index));
+        }
+        return  newCol;
+    }
+
+    public T getCursorItem(int rowPosition)
+    {
+        return items.get(rowPosition);
+    }
+    public void insert(T value)
+    {
+        items.add(value);
+        rowNumber += 1;
     }
 
     public void insert(String value)
@@ -44,6 +94,7 @@ public class Column<T>
             {
                 items.add((T) value);
             }
+            rowNumber += 1;
         }
         catch (ClassCastException e)
         {

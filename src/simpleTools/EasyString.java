@@ -1,5 +1,8 @@
 package simpleTools;
 
+import java.lang.reflect.Array;
+import java.util.*;
+
 /**
  * Created by 51694 on 2017/3/27.
  */
@@ -48,5 +51,44 @@ public class EasyString
         return joinString;
     }
 
-
+    private static void putCollection(Map<String, Integer> m, String k)
+    {
+        if (m.containsKey(k))
+        {
+            Integer v = m.get(k);
+            v += 1;
+            m.put(k, v);
+        }
+        else
+        {
+            m.put(k, 1);
+        }
+    }
+    public static String[] hashintersect(String[] str1, String[] str2)
+    {
+        Map<String, Integer> tempMap = new HashMap<>();
+        Set<String> set1 = new HashSet<>(Arrays.asList(str1));
+        Set<String> set2 = new HashSet<>(Arrays.asList(str2));
+        for (String s : set1)
+        {
+            putCollection(tempMap, s);
+        }
+        for (String s : set2)
+        {
+            putCollection(tempMap, s);
+        }
+        if (!tempMap.containsValue(2))
+        {
+            return null;
+        }
+        Set<String> intersect = new HashSet<>();
+        for (String k : tempMap.keySet())
+        {
+            if (tempMap.get(k) == 2)
+            {
+                intersect.add(k);
+            }
+        }
+        return (String[]) intersect.toArray();
+    }
 }
