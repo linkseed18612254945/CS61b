@@ -43,6 +43,11 @@ public class Cursor
         rowNumbers.add(index);
     }
 
+    public void clearSelectRow()
+    {
+        rowNumbers.clear();
+    }
+
     public void setRange(int startIndex, int endIndex)
     {
         for (int i = startIndex; i <= endIndex; i += 1)

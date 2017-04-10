@@ -113,14 +113,25 @@ public class Database {
     public void selectTables(String[] colExpressions, String[] joinTables, String[] condition)
     {
         System.out.println(Arrays.toString(colExpressions));
-
+        System.out.println(Arrays.toString(joinTables));
         System.out.println(Arrays.toString(condition));
-        Table[] selectTables = new Table[joinTables.length];
-        for (int i = 0; i < joinTables.length; i += 1)
+
+        Table basicTable = tables.get(joinTables[0]);
+        Table selectTable;
+        if (joinTables.length == 1)
         {
-            selectTables[i] = tables.get(joinTables[i]);
+            selectTable = basicTable.select(colExpressions, null);
         }
-        System.out.println(selectTables[0].toString());
+        else
+        {
+            Table[] joinedTables = new Table[joinTables.length - 1];
+            for (int i = 0; i < joinTables.length - 1; i += 1)
+            {
+                joinedTables[i] = tables.get(joinTables[i + 1]);
+            }
+            selectTable = basicTable.select(colExpressions, joinedTables);
+        }
+        //System.out.println(selectTable.toString());
     }
 
     public Map<String, Table> getTables()

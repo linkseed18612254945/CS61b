@@ -23,11 +23,11 @@ public class Column<T>
         rowNumber = 0;
     }
 
-    public Column(T item, int rowNumber)
+    public Column(T item, String colName, String colType, int rowNumber)
     {
-        name = "singleTemp";
+        name = colName;
         items = new ArrayList<>();
-        type = item.getClass().toString();
+        type = colType;
         this.rowNumber = rowNumber;
         for (int i = 0; i < rowNumber; i += 1)
         {

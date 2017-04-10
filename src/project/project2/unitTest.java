@@ -75,7 +75,8 @@ public class unitTest
     {
         Database db = new Database();
         db.transact("load fans");
-        db.transact("select Firstname,Lastname,TeamName from fans where Lastname >= 'Lee'");
+        db.transact("load records");
+        db.transact("select FirstName,LastName,TeamName,Season,Wins from fans,records where LastName >= 'Lee'");
     }
 
     public static void main()

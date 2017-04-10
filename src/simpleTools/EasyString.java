@@ -64,7 +64,8 @@ public class EasyString
             m.put(k, 1);
         }
     }
-    public static String[] hashintersect(String[] str1, String[] str2)
+
+    public static String[] hashIntersect(String[] str1, String[] str2)
     {
         Map<String, Integer> tempMap = new HashMap<>();
         Set<String> set1 = new HashSet<>(Arrays.asList(str1));
@@ -89,6 +90,34 @@ public class EasyString
                 intersect.add(k);
             }
         }
-        return (String[]) intersect.toArray();
+        return intersect.toArray(new String[0]);
     }
+
+
+    public static String[] complement(String[] total, String[] other)
+    {
+        List<String> complementSet = new ArrayList<>();
+        for (String s: total)
+        {
+            if (!pyContain(other, s))
+            {
+                complementSet.add(s);
+            }
+        }
+        return complementSet.toArray(new String[0]);
+    }
+
+    public static String[] stringInMap(Map<String, String> m, String[] strs)
+    {
+        List<String> stringInMap = new ArrayList<>();
+        for (String s: strs)
+        {
+            if (m.containsKey(s))
+            {
+                stringInMap.add(s);
+            }
+        }
+        return  stringInMap.toArray(new String[0]);
+    }
+
 }
