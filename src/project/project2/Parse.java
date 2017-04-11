@@ -116,11 +116,14 @@ public class Parse {
     {
         String[] colNames = exprs.split(",");
         String[] selectedTables = tables.split(",");
-        String[] condition = conds.split(" ");
-        if (!EasyString.pyContain(COMPARATOR, condition[1]))
+        String[] condition;
+        if (conds == null)
         {
-            System.err.println("Unchecked comparator.");
-            return;
+            condition = null;
+        }
+        else
+        {
+            condition = conds.split(" ");
         }
         db.createTableBySelect(name, colNames, selectedTables, condition);
     }
@@ -168,7 +171,15 @@ public class Parse {
         }
         String[] colExpressions = m.group(1).trim().split(",");
         String[] joinTables = m.group(2).trim().split(",");
-        String[] condition = m.group(3).trim().split(" ");
-        db.selectTables(colExpressions, joinTables, condition);
+        String[] condition;
+        if (m.group(3) == null)
+        {
+            condition = null;
+        }
+        else
+        {
+            condition = m.group(3).trim().split(" ");
+        }
+        db.selectTables("SelectTable", colExpressions, joinTables, condition);
     }
 }

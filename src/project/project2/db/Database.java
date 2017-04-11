@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+import static simpleTools.EasyString.pyContain;
+
 public class Database {
     private static final String tableStorePath = "C:\\Users\\51694\\cs61b\\src\\project\\project2\\tables";
 
@@ -29,7 +31,8 @@ public class Database {
 
     public void createTableBySelect(String tableName, String[] colNames, String[] selectedTableNames, String[] condition)
     {
-
+        Table newTable = selectTables(tableName, colNames, selectedTableNames, condition);
+        tables.put(tableName, newTable);
     }
 
     public void insertTable(String tableName, String[] values)
@@ -57,14 +60,6 @@ public class Database {
         catch (IOException e)
         {
             e.printStackTrace();
-        }
-    }
-
-    void storeTable()
-    {
-        for (String key: tables.keySet())
-        {
-            storeTable(key);
         }
     }
 
@@ -110,28 +105,47 @@ public class Database {
         }
     }
 
-    public void selectTables(String[] colExpressions, String[] joinTables, String[] condition)
+    public Table selectTables(String TableName, String[] colExpressions, String[] joinTables, String[] condition)
     {
-        System.out.println(Arrays.toString(colExpressions));
-        System.out.println(Arrays.toString(joinTables));
-        System.out.println(Arrays.toString(condition));
-
-        Table basicTable = tables.get(joinTables[0]);
-        Table selectTable;
-        if (joinTables.length == 1)
+        Table[] allTables = new Table[joinTables.length];
+        for (int i = 0; i < joinTables.length; i += 1)
         {
-            selectTable = basicTable.select(colExpressions, null);
+            allTables[i] = tables.get(joinTables[i]);
+        }
+        Table basicTable = allTables[0];
+
+        Condition cond;
+        if (condition != null)
+        {
+            String conditionType = "unary";
+            for (Table t: allTables)
+            {
+                if (pyContain(t.colNames, condition[2]))
+                {
+                    conditionType = "binary";
+                }
+            }
+            cond = new Condition(condition[0], condition[1], condition[2], conditionType);
         }
         else
         {
-            Table[] joinedTables = new Table[joinTables.length - 1];
-            for (int i = 0; i < joinTables.length - 1; i += 1)
-            {
-                joinedTables[i] = tables.get(joinTables[i + 1]);
-            }
-            selectTable = basicTable.select(colExpressions, joinedTables);
+            cond = null;
         }
-        //System.out.println(selectTable.toString());
+
+        Table selectTable;
+        if (joinTables.length == 1)
+        {
+            selectTable = basicTable.select(TableName,colExpressions, null, cond);
+        }
+        else
+        {
+            Table[] joinedTs = new Table[joinTables.length - 1];
+            System.arraycopy(allTables, 1, joinedTs, 0, joinTables.length - 1);
+
+            selectTable = basicTable.select(TableName, colExpressions, joinedTs, cond);
+        }
+        System.out.println(selectTable.toString());
+        return selectTable;
     }
 
     public Map<String, Table> getTables()

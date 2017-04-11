@@ -2,6 +2,8 @@ package simpleTools;
 
 import java.lang.reflect.Array;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by 51694 on 2017/3/27.
@@ -118,6 +120,12 @@ public class EasyString
             }
         }
         return  stringInMap.toArray(new String[0]);
+    }
+
+    public static Matcher containsString(String s, String subs)
+    {
+        Pattern pattern = Pattern.compile(subs);
+        return pattern.matcher(s);
     }
 
 }

@@ -16,15 +16,14 @@ public class unitTest
         db.transact("print T1");
     }
 
-    //@Test
+    @Test
     public void createSelectTableTest()
     {
         Database db = new Database();
-        db.transact("create table T1 (x int, y int, z string)");
-        db.transact("insert into T1 values 2, 5, good ");
-        db.transact("insert into T1 values 3, 1, nice ");
-        db.transact("insert into T1 values 4, 0, great ");
-        db.transact("create table T2 as select x,y from T1 where x >= y");
+        db.transact("load teams");
+        db.transact("load records");
+        db.transact("create table seasonRatios as select City,Season,Wins-Losses as Ratio from teams,records");
+        db.transact("store seasonRatios");
     }
 
     //@Test
@@ -70,13 +69,13 @@ public class unitTest
         db.transact("print T1");
     }
 
-    @Test
+    //@Test
     public void selectTest()
     {
         Database db = new Database();
         db.transact("load fans");
         db.transact("load records");
-        db.transact("select FirstName,LastName,TeamName,Season,Wins from fans,records where LastName >= 'Lee'");
+        db.transact("select FirstName,LastName,TeamName,Season,Wins,Losses from fans,records where Wins > 20");
     }
 
     public static void main()

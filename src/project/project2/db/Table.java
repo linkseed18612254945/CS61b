@@ -16,11 +16,11 @@ public class Table
     //private final int columnNum;
     private int rowNum, colNum;
     private String tableName;
-    private String[] colNames;
+    public String[] colNames;
     private String[] colTypes;
     private Column[] columns;
     private Cursor cursor;
-    private Map<String, Column> nameColMap = new HashMap<>();
+    public Map<String, Column> nameColMap = new HashMap<>();
     private Map<String, String> nameTypeMap = new HashMap<>();
 
     public Table(String name, String[] colNames, String[] colTypes)
@@ -158,7 +158,7 @@ public class Table
         return new Table("join", newCols);
     }
 
-    public Table join(Table t)
+    private Table join(Table t)
     {
         Table joinTable = null;
         int tempNum = 0;
@@ -200,21 +200,66 @@ public class Table
         return joinTable;
     }
 
-    public Table selectedTable(String[] names)
+
+    /** Choose some rows by "where condition" */
+    private Table conditionChoose(Condition c)
     {
-        Column[] selectedCol = new Column[names.length];
-        for (int i = 0; i < names.length; i += 1)
+        if (c == null)
         {
-            selectedCol[i] = nameColMap.get(names[i]);
+            return this;
         }
-        return new Table("SelectedTable", selectedCol);
+        if (c.type.equals("unary"))
+        {
+            for (int i = 0; i < rowNum; i += 1)
+            {
+                if (c.compare(nameColMap.get(c.columnName).getCursorItem(i)))
+                {
+                    cursor.addSelectRow(i);
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < rowNum; i += 1)
+            {
+                if (c.compare(nameColMap.get(c.columnName).getCursorItem(i), nameColMap.get(c.literal).getCursorItem(i)))
+                {
+                    cursor.addSelectRow(i);
+                }
+            }
+        }
+        return getCursorPointTable(cursor);
     }
 
-    public Table select(String[] names, Table[] joinTables)
+    private Table selectedTable(String tableName, String[] expressions)
     {
+        Expression[] exps = new Expression[expressions.length];
+        for (int i = 0; i < expressions.length; i += 1)
+        {
+            exps[i] = new Expression(expressions[i].split(" "), this);
+        }
+        Column[] selectedCol = new Column[expressions.length];
+        for (int i = 0; i < exps.length; i += 1)
+        {
+            if (exps[i].type.equals("single"))
+            {
+                selectedCol[i] = nameColMap.get(exps[i].basicCol);
+            }
+            else
+            {
+                selectedCol[i] = nameColMap.get(exps[i].basicCol).operate(exps[i].operands, exps[i].asName);
+            }
+
+        }
+        return new Table(tableName, selectedCol);
+    }
+
+    public Table select(String tableName, String[] expressions, Table[] joinTables, Condition cond)
+    {
+        Table selectT;
         if (joinTables == null)
         {
-            return selectedTable(names);
+            selectT = conditionChoose(cond).selectedTable(tableName, expressions);
         }
         else
         {
@@ -223,15 +268,16 @@ public class Table
             {
                 joinTable = joinTable.join(t);
             }
-            System.out.println(joinTable.toString());
-            return joinTable.selectedTable(names);
+            selectT = joinTable.conditionChoose(cond).selectedTable(tableName, expressions);
         }
+        return selectT;
     }
 
     public String getColNames()
     {
         return pyStyleJoin(colNames, ' ', colTypes, ',');
     }
+
 
     public int getRowNum()
     {
