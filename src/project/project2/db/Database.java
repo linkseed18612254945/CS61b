@@ -48,18 +48,27 @@ public class Database {
 
     public void storeTable(String tableName)
     {
-        Table t = tables.get(tableName);
-        String path = tableStorePath + "\\" + tableName + ".tbl";
-        try
+        if (tables.containsKey(tableName))
         {
-            FileWriter fw = new FileWriter(path);
-            fw.write(t.toString());
-            fw.close();
+            Table t = tables.get(tableName);
+            String path = tableStorePath + "\\" + tableName + ".tbl";
+            try
+            {
+                FileWriter fw = new FileWriter(path);
+                String tStr = t.toString();
+                fw.write(tStr);
+                fw.close();
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.toString());
+            }
         }
-        catch (Exception e)
+        else
         {
             System.out.println(String.format("ERROR: No such table: %s", tableName));
         }
+
     }
 
     /** A table read helper method, get the column names and types */

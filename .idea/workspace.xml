@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a18b7f67-aed2-4018-854d-9925997c9660" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/project/project2/tables/seasonRatios.tbl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/project/project2/tables/badTable.tbl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/project/project2/Main.java" afterPath="$PROJECT_DIR$/src/project/project2/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/project/project2/Parse.java" afterPath="$PROJECT_DIR$/src/project/project2/Parse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/project/project2/db/Database.java" afterPath="$PROJECT_DIR$/src/project/project2/db/Database.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/project/project2/db/Expression.java" afterPath="$PROJECT_DIR$/src/project/project2/db/Expression.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/project/project2/tables/T1.tbl" afterPath="$PROJECT_DIR$/src/project/project2/tables/T1.tbl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/project/project2/unitTest.java" afterPath="$PROJECT_DIR$/src/project/project2/unitTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,15 +28,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="unitTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="unitTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/project/project2/unitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="120">
+              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createNewTableTest#0;class#unitTest#0" expanded="true" />
-                <element signature="method#createSelectTableTest#0;class#unitTest#0" expanded="true" />
                 <element signature="method#insertTest#0;class#unitTest#0" expanded="true" />
                 <element signature="method#storeTest#0;class#unitTest#0" expanded="true" />
                 <element signature="method#loadTest#0;class#unitTest#0" expanded="true" />
@@ -63,15 +57,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/project/project2/db/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#createTable#0;class#Database#0" expanded="true" />
                 <element signature="method#createTableBySelect#0;class#Database#0" expanded="true" />
-                <element signature="method#storeTable#0;class#Database#0" expanded="true" />
                 <element signature="method#loadTable#0;class#Database#0" expanded="true" />
                 <element signature="method#selectTables#0;class#Database#0" expanded="true" />
                 <element signature="method#transact#0;class#Database#0" expanded="true" />
@@ -210,9 +204,9 @@
         <option value="$PROJECT_DIR$/src/project/project2/db/Column.java" />
         <option value="$PROJECT_DIR$/src/project/project2/unitTest.java" />
         <option value="$PROJECT_DIR$/src/project/project2/Main.java" />
-        <option value="$PROJECT_DIR$/src/project/project2/db/Database.java" />
         <option value="$PROJECT_DIR$/src/project/project2/Parse.java" />
         <option value="$PROJECT_DIR$/src/project/project2/db/Expression.java" />
+        <option value="$PROJECT_DIR$/src/project/project2/db/Database.java" />
       </list>
     </option>
   </component>
@@ -316,6 +310,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="project2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs61b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cs61b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tables" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -825,13 +845,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/discussion/discussion05/parkingLot/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JavaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1163,21 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/project2/db/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="method#createTable#0;class#Database#0" expanded="true" />
-            <element signature="method#createTableBySelect#0;class#Database#0" expanded="true" />
-            <element signature="method#storeTable#0;class#Database#0" expanded="true" />
-            <element signature="method#loadTable#0;class#Database#0" expanded="true" />
-            <element signature="method#selectTables#0;class#Database#0" expanded="true" />
-            <element signature="method#transact#0;class#Database#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/project2/Parse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1242,16 +1240,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/project/project2/unitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="120">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createNewTableTest#0;class#unitTest#0" expanded="true" />
-            <element signature="method#createSelectTableTest#0;class#unitTest#0" expanded="true" />
             <element signature="method#insertTest#0;class#unitTest#0" expanded="true" />
             <element signature="method#storeTest#0;class#unitTest#0" expanded="true" />
             <element signature="method#loadTest#0;class#unitTest#0" expanded="true" />
             <element signature="method#selectTest#0;class#unitTest#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/project2/tables/badTable.tbl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/project2/db/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createTable#0;class#Database#0" expanded="true" />
+            <element signature="method#createTableBySelect#0;class#Database#0" expanded="true" />
+            <element signature="method#loadTable#0;class#Database#0" expanded="true" />
+            <element signature="method#selectTables#0;class#Database#0" expanded="true" />
+            <element signature="method#transact#0;class#Database#0" expanded="true" />
           </folding>
         </state>
       </provider>
