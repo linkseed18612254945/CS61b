@@ -1,14 +1,10 @@
 package project.project2;
 
 import project.project2.db.Database;
-import project.project2.db.Table;
-import simpleTools.EasyString;
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-
-import java.util.StringJoiner;
 
 public class Parse {
     private Database db;

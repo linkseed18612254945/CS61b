@@ -7,7 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,9 +56,9 @@ public class Database {
             fw.write(t.toString());
             fw.close();
         }
-        catch (IOException e)
+        catch (Exception e)
         {
-            e.printStackTrace();
+            System.out.println(String.format("ERROR: No such table: %s", tableName));
         }
     }
 
@@ -101,7 +100,7 @@ public class Database {
         }
         catch (IOException e)
         {
-            e.printStackTrace();
+            System.out.println(String.format("ERROR: TBL file not found: %s", tableName));
         }
     }
 

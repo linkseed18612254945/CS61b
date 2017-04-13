@@ -1,13 +1,13 @@
 City string,Season int,Ratio int
-'New York',2015,18
-'New York',2014,-4
-'New York',2013,-14
-'Pittsburgh',2015,4
-'Pittsburgh',2014,6
-'Pittsburgh',2013,0
-'New England',2015,8
-'New England',2014,8
-'New England',2013,8
-'Berkeley',2016,-2
-'Berkeley',2015,3
-'Berkeley',2014,-2
+'New York',2015,1
+'New York',2014,0
+'New York',2013,0
+'Pittsburgh',2015,1
+'Pittsburgh',2014,2
+'Pittsburgh',2013,1
+'New England',2015,3
+'New England',2014,3
+'New England',2013,3
+'Berkeley',2016,0
+'Berkeley',2015,1
+'Berkeley',2014,0

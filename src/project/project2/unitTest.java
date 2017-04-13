@@ -16,7 +16,7 @@ public class unitTest
         db.transact("print T1");
     }
 
-    @Test
+    //@Test
     public void createSelectTableTest()
     {
         Database db = new Database();
@@ -56,6 +56,7 @@ public class unitTest
         db.transact("insert into T1 values 2, beijing ");
         db.transact("load T1");
         db.transact("print T1");
+        db.transact("load T222");
     }
 
     //@Test
@@ -75,6 +76,8 @@ public class unitTest
         Database db = new Database();
         db.transact("load fans");
         db.transact("load records");
+        db.transact("load fans");
+        db.transact("select FirstName,LastName,TeamName from fans where LastName >= 'Lee'");
         db.transact("select FirstName,LastName,TeamName,Season,Wins,Losses from fans,records where Wins > 20");
     }
 
