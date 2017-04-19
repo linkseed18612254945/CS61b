@@ -1,6 +1,7 @@
 package lectureCode.lecture19;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by 51694 on 2017/4/18.
@@ -36,15 +37,6 @@ public class MinHeap<Item extends Comparable<Item>> implements MinPQ<Item>
     @Override
     public void add(Item x)
     {
-        keys.add(x);
-        int childIndex = keys.size() - 1;
-        int parentIndex = parent(childIndex);
-        while (keys.get(parentIndex).compareTo(x) > 0 && childIndex != 1)
-        {
-            swap(childIndex, parentIndex);
-            childIndex = parentIndex;
-            parentIndex = parent(childIndex);
-        }
     }
 
     @Override
@@ -56,12 +48,7 @@ public class MinHeap<Item extends Comparable<Item>> implements MinPQ<Item>
     @Override
     public Item removeSmallest()
     {
-        keys.set(0, keys.get(size() - 1));
-        int parentIndex = 1;
-        while (keys.get(parentIndex).compareTo(keys.get(lChild(parentIndex))) > 0 || keys.get(parentIndex).compareTo(keys.get(lChild(parentIndex))) > 0)
-        {
-            swap();
-        }
+        return null;
     }
 
     @Override
