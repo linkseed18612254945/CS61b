@@ -7,10 +7,10 @@ public class HashTest
 {
     public static void main(String[] args)
     {
-        String x = "cat";
-        StringHash a = new StringHash();
-        a.insert(x);
-        a.insert("catss");
-        System.out.println(a.contain("catss"));
+        SeparateChainingHashST<String, Integer> st = new SeparateChainingHashST<>();
+        st.put("lk", 49);
+        st.put("hkx", 2);
+
+        System.out.println(st.get("lk"));
     }
 }
