@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a18b7f67-aed2-4018-854d-9925997c9660" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lectureCode/lecture20/Action.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lectureCode/lecture20/FindPig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lectureCode/lecture20/PrintAct.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lectureCode/lecture20/Tree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/homework/hw02/PercolateTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homework/hw02/InteractivePercolationVisualizer.java" afterPath="$PROJECT_DIR$/src/homework/hw02/InteractivePercolationVisualizer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homework/hw02/Percolation.java" afterPath="$PROJECT_DIR$/src/homework/hw02/Percolation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homework/hw02/PercolationStats.java" afterPath="$PROJECT_DIR$/src/homework/hw02/PercolationStats.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/homework/hw02/PercolationVisualizer.java" afterPath="$PROJECT_DIR$/src/homework/hw02/PercolationVisualizer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,90 +31,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="PercolationStats.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/homework/hw02/PercolationStats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3400">
+              <caret line="85" column="30" lean-forward="false" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#PercolationStats#0;class#PercolationStats#0" expanded="true" />
+                <element signature="docComment;method#simulation#0;class#PercolationStats#0" expanded="true" />
+                <element signature="method#simulation#0;class#PercolationStats#0" expanded="true" />
+                <element signature="method#MonteCarloSim#0;class#PercolationStats#0" expanded="true" />
+                <element signature="docComment;method#mean#0;class#PercolationStats#0" expanded="true" />
+                <element signature="method#mean#0;class#PercolationStats#0" expanded="true" />
+                <element signature="docComment;method#stddev#0;class#PercolationStats#0" expanded="true" />
+                <element signature="method#stddev#0;class#PercolationStats#0" expanded="true" />
+                <element signature="docComment;method#confidenceLow#0;class#PercolationStats#0" expanded="true" />
+                <element signature="e#1669#1670#0" expanded="true" />
+                <element signature="e#1733#1734#0" expanded="true" />
+                <element signature="docComment;method#confidenceHigh#0;class#PercolationStats#0" expanded="true" />
+                <element signature="e#1827#1828#0" expanded="true" />
+                <element signature="e#1891#1892#0" expanded="true" />
+                <element signature="e#1930#1931#0" expanded="true" />
+                <element signature="e#1968#1969#0" expanded="true" />
+                <element signature="e#2008#2009#0" expanded="true" />
+                <element signature="e#2071#2072#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PercolateTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/homework/hw02/PercolateTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Percolation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/homework/hw02/Percolation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lectureCode/lecture20/Tree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="97" column="27" lean-forward="true" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+            <state relative-caret-position="-86">
+              <caret line="95" column="28" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
               <folding>
-                <element signature="method#Tree#0;class#Tree#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#370#371#0" expanded="true" />
-                <element signature="method#heightHelp#0;class#Tree#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="method#preOrder#0;class#Tree#0" expanded="true" />
-                <element signature="method#inOrder#0;class#Tree#0" expanded="true" />
-                <element signature="method#postOrder#0;class#Tree#0" expanded="true" />
-                <element signature="method#levelOrder#0;class#Tree#0" expanded="true" />
-                <element signature="method#printLevel#0;class#Tree#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#Site#0;class#Site#0;class#Percolation#0" expanded="true" />
+                <element signature="method#Percolation#0;class#Percolation#0" expanded="true" />
+                <element signature="method#unionAround#0;class#Percolation#0" expanded="true" />
+                <element signature="docComment;method#open#0;class#Percolation#0" expanded="true" />
+                <element signature="method#open#0;class#Percolation#0" expanded="true" />
+                <element signature="method#randomOpen#0;class#Percolation#0" expanded="true" />
+                <element signature="docComment;method#isOpen#0;class#Percolation#0" expanded="true" />
+                <element signature="docComment;method#isFull#0;class#Percolation#0" expanded="true" />
+                <element signature="method#isFull#0;class#Percolation#0" expanded="true" />
+                <element signature="docComment;method#numberOfOpenSites#0;class#Percolation#0" expanded="true" />
+                <element signature="docComment;method#percolates#0;class#Percolation#0" expanded="true" />
+                <element signature="e#3211#3212#0" expanded="true" />
+                <element signature="e#3291#3292#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintAct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lectureCode/lecture20/PrintAct.java">
+      <file leaf-file-name="StdRandom.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/javalib/algs4.jar!/edu/princeton/cs/algs4/StdRandom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#186#187#0" expanded="true" />
-                <element signature="e#232#233#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lectureCode/lecture20/Action.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindPig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lectureCode/lecture20/FindPig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="21" />
-              <folding>
-                <element signature="e#191#192#0" expanded="true" />
-                <element signature="e#219#220#0" expanded="true" />
-                <element signature="method#visit#0;class#FindPig#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuickFindDS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lectureCode/lecture17/QuickFindDS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuickUnionDS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lectureCode/lecture17/QuickUnionDS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="396">
+              <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,9 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/lectureCode/lecture17/DisjointSetsTest.java" />
-        <option value="$PROJECT_DIR$/src/lectureCode/lecture12and13/MapTest.java" />
-        <option value="$PROJECT_DIR$/src/project/project2/examples/fans.tbl" />
         <option value="$PROJECT_DIR$/src/project/project2/tables/fans.tbl" />
         <option value="$PROJECT_DIR$/src/project/project2/db/Cursor.java" />
         <option value="$PROJECT_DIR$/src/project/project2/db/Condition.java" />
@@ -187,12 +172,15 @@
         <option value="$PROJECT_DIR$/src/lab/lab10/HeapTest.java" />
         <option value="$PROJECT_DIR$/src/lab/lab10/ArrayHeap.java" />
         <option value="$PROJECT_DIR$/src/lectureCode/lecture19/MinHeap.java" />
-        <option value="$PROJECT_DIR$/src/homework/hw02/PercolationVisualizer.java" />
-        <option value="$PROJECT_DIR$/src/homework/hw02/Percolation.java" />
         <option value="$PROJECT_DIR$/src/lectureCode/lecture20/Action.java" />
         <option value="$PROJECT_DIR$/src/lectureCode/lecture20/FindPig.java" />
         <option value="$PROJECT_DIR$/src/lectureCode/lecture20/PrintAct.java" />
         <option value="$PROJECT_DIR$/src/lectureCode/lecture20/Tree.java" />
+        <option value="$PROJECT_DIR$/src/homework/hw02/PercolationVisualizer.java" />
+        <option value="$PROJECT_DIR$/src/homework/hw02/InteractivePercolationVisualizer.java" />
+        <option value="$PROJECT_DIR$/src/homework/hw02/Percolation.java" />
+        <option value="$PROJECT_DIR$/src/homework/hw02/PercolationStats.java" />
+        <option value="$PROJECT_DIR$/src/homework/hw02/PercolateTest.java" />
       </list>
     </option>
   </component>
@@ -200,10 +188,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="2762" />
-    <option name="height" value="1770" />
+    <option name="x" value="1357" />
+    <option name="width" value="1390" />
+    <option name="height" value="1755" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -273,11 +260,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lectureCode" />
+              <option name="myItemId" value="homework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lecture20" />
+              <option name="myItemId" value="hw02" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,7 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lectureCode" />
+              <option name="myItemId" value="homework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,85 +311,7 @@
       <recent name="C:\Users\51694\cs61b\src\homework\hw01\synthesizer" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Tree">
-    <configuration default="false" name="ArrayHeap.testSink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="lab.lab10.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cs61b" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="lab.lab10" />
-      <option name="MAIN_CLASS_NAME" value="lab.lab10.ArrayHeap" />
-      <option name="METHOD_NAME" value="testSink" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ArrayHeap.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="lab.lab10.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cs61b" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="lab.lab10" />
-      <option name="MAIN_CLASS_NAME" value="lab.lab10.ArrayHeap" />
-      <option name="METHOD_NAME" value="testInsert" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ArrayHeap.testInsertAndRemoveOnce" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="lab.lab10.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cs61b" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="lab.lab10" />
-      <option name="MAIN_CLASS_NAME" value="lab.lab10.ArrayHeap" />
-      <option name="METHOD_NAME" value="testInsertAndRemoveOnce" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.PercolateTest.PercolateStatsTest">
     <configuration default="false" name="ArrayHeap.testInsertAndRemoveAllButLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -447,6 +356,72 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="cs61b" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PercolationVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homework.hw02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="homework.hw02.PercolationVisualizer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="cs61b" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="InteractivePercolationVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homework.hw02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="homework.hw02.InteractivePercolationVisualizer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="cs61b" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PercolateTest.PercolateStatsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homework.hw02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="cs61b" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="homework.hw02" />
+      <option name="MAIN_CLASS_NAME" value="homework.hw02.PercolateTest" />
+      <option name="METHOD_NAME" value="PercolateStatsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -654,19 +629,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testSink" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsert" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsertAndRemoveOnce" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsertAndRemoveAllButLast" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Tree" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsertAndRemoveAllButLast" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Tree" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PercolationVisualizer" />
+      <item index="3" class="java.lang.String" itemvalue="Application.InteractivePercolationVisualizer" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PercolateTest.PercolateStatsTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Tree" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsertAndRemoveAllButLast" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsertAndRemoveOnce" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsert" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testSink" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PercolateTest.PercolateStatsTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.InteractivePercolationVisualizer" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PercolationVisualizer" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Tree" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayHeap.testInsertAndRemoveAllButLast" />
       </list>
     </recent_temporary>
   </component>
@@ -687,35 +662,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayHeap_testInsert - 2017.04.19 at 12h 29m 40s.xml">
-      <configuration name="ArrayHeap.testInsert" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 16m 07s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testInsert - 2017.04.19 at 12h 30m 44s.xml">
-      <configuration name="ArrayHeap.testInsert" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 16m 43s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testInsertAndRemoveAllButLast - 2017.04.19 at 12h 32m 05s.xml">
-      <configuration name="ArrayHeap.testInsertAndRemoveAllButLast" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 17m 26s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testInsertAndRemoveOnce - 2017.04.19 at 12h 30m 53s.xml">
-      <configuration name="ArrayHeap.testInsertAndRemoveOnce" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 17m 39s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testInsertAndRemoveOnce - 2017.04.19 at 12h 31m 56s.xml">
-      <configuration name="ArrayHeap.testInsertAndRemoveOnce" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 20m 43s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testSink - 2017.04.19 at 12h 29m 36s.xml">
-      <configuration name="ArrayHeap.testSink" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 21m 05s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testSwim - 2017.04.19 at 12h 25m 28s.xml">
-      <configuration name="ArrayHeap.testSwim" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 21m 13s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testSwim - 2017.04.19 at 12h 27m 36s.xml">
-      <configuration name="ArrayHeap.testSwim" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 23m 49s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testSwim - 2017.04.19 at 12h 27m 42s.xml">
-      <configuration name="ArrayHeap.testSwim" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 24m 06s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayHeap_testSwim - 2017.04.19 at 12h 28m 59s.xml">
-      <configuration name="ArrayHeap.testSwim" configurationId="JUnit" />
+    <history-entry file="PercolateTest_PercolateStatsTest - 2017.04.20 at 16h 24m 36s.xml">
+      <configuration name="PercolateTest.PercolateStatsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -728,31 +703,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2762" height="1770" extended-state="7" />
+    <frame x="1357" y="0" width="1390" height="1755" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32469305" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32460374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30081856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30323914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11924528" sideWeight="0.4965157" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24726135" sideWeight="0.4965157" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20528302" sideWeight="0.5034843" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39904502" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4011027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -770,7 +745,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="63" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -779,27 +754,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/project/project2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/project2/db/Cursor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/project2/db/Condition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="206" column="17" lean-forward="false" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/project2/db/ColOperand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1234,32 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/homework/hw02/PercolationStats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/homework/hw02/InteractivePercolationVisualizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/homework/hw02/PercolationVisualizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lectureCode/lecture17/DisjointSets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1288,14 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/homework/hw02/Percolation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1347,6 +1267,106 @@
             <element signature="method#postOrder#0;class#Tree#0" expanded="true" />
             <element signature="method#levelOrder#0;class#Tree#0" expanded="true" />
             <element signature="method#printLevel#0;class#Tree#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework/hw02/outputFiles/PercolateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework/hw02/InteractivePercolationVisualizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1120">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#InteractivePercolationVisualizer#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework/hw02/PercolationVisualizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2567">
+          <caret line="86" column="1" lean-forward="true" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+          <folding>
+            <element signature="method#draw#0;class#PercolationVisualizer#0" expanded="true" />
+            <element signature="method#simulateFromFile#0;class#PercolationVisualizer#0" expanded="true" />
+            <element signature="method#main#0;class#PercolationVisualizer#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/javalib/algs4.jar!/edu/princeton/cs/algs4/StdRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework/hw02/Percolation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="95" column="28" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Site#0;class#Site#0;class#Percolation#0" expanded="true" />
+            <element signature="method#Percolation#0;class#Percolation#0" expanded="true" />
+            <element signature="method#unionAround#0;class#Percolation#0" expanded="true" />
+            <element signature="docComment;method#open#0;class#Percolation#0" expanded="true" />
+            <element signature="method#open#0;class#Percolation#0" expanded="true" />
+            <element signature="method#randomOpen#0;class#Percolation#0" expanded="true" />
+            <element signature="docComment;method#isOpen#0;class#Percolation#0" expanded="true" />
+            <element signature="docComment;method#isFull#0;class#Percolation#0" expanded="true" />
+            <element signature="method#isFull#0;class#Percolation#0" expanded="true" />
+            <element signature="docComment;method#numberOfOpenSites#0;class#Percolation#0" expanded="true" />
+            <element signature="docComment;method#percolates#0;class#Percolation#0" expanded="true" />
+            <element signature="e#3211#3212#0" expanded="true" />
+            <element signature="e#3291#3292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework/hw02/PercolateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/homework/hw02/PercolationStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="85" column="30" lean-forward="false" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#PercolationStats#0;class#PercolationStats#0" expanded="true" />
+            <element signature="docComment;method#simulation#0;class#PercolationStats#0" expanded="true" />
+            <element signature="method#simulation#0;class#PercolationStats#0" expanded="true" />
+            <element signature="method#MonteCarloSim#0;class#PercolationStats#0" expanded="true" />
+            <element signature="docComment;method#mean#0;class#PercolationStats#0" expanded="true" />
+            <element signature="method#mean#0;class#PercolationStats#0" expanded="true" />
+            <element signature="docComment;method#stddev#0;class#PercolationStats#0" expanded="true" />
+            <element signature="method#stddev#0;class#PercolationStats#0" expanded="true" />
+            <element signature="docComment;method#confidenceLow#0;class#PercolationStats#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="docComment;method#confidenceHigh#0;class#PercolationStats#0" expanded="true" />
+            <element signature="e#1827#1828#0" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1930#1931#0" expanded="true" />
+            <element signature="e#1968#1969#0" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+            <element signature="e#2071#2072#0" expanded="true" />
           </folding>
         </state>
       </provider>
