@@ -1,14 +1,14 @@
 package discussion.discussion03;
 
-public class SLList
+public class SLList<Item>
 {	
 	/* The node class in list */
-	public class IntNode
+	private class IntNode
 	{
-		public int item;
+		public Item item;
 		public IntNode next;
 
-		public IntNode(int i, IntNode n)
+		IntNode(Item i, IntNode n)
 		{
 			item = i;
 			next = n;
@@ -25,20 +25,19 @@ public class SLList
 	public SLList()
 	{
 		size = 0;
-		sentinel = new IntNode(0, null);
+		sentinel = new IntNode(null, null);
 		last = sentinel;
 	}
 
-	public SLList(int x)
+	public SLList(Item x)
 	{
 		size = 1;
-		sentinel = new IntNode(0, null);
-		sentinel.next = new IntNode(x, null);
+		sentinel = new IntNode(null, new IntNode(x, null));
 		last = sentinel.next;
 	}
 
 	/* Add an int node to the head of list, value is x. */
-	public void addFirst(int x)
+	public void addFirst(Item x)
 	{
 		sentinel.next = new IntNode(x, sentinel.next);
 		if (last == null)
@@ -49,7 +48,7 @@ public class SLList
 	}
 
 	/* Return the value of first node */
-	public int getFirst()
+	public Item getFirst()
 	{
 		return sentinel.next.item;
 	}
@@ -57,11 +56,13 @@ public class SLList
 	/* Remove the first element in list */
 	public void removeFirst()
 	{
+		if (isEmpty()) return;
 		sentinel.next = sentinel.next.next;
+		size -= 1;
 	}
 
 	/* Adds an item to the end of the list */
-	public void addLast(int x)
+	public void addLast(Item x)
 	{	
 		last.next = new IntNode(x, null);
 		last = last.next;
@@ -69,7 +70,7 @@ public class SLList
 	}
 
 	/* Return the last node value of the list */
-	public int getLast()
+	public Item getLast()
 	{
 		return last.item;
 	}
@@ -77,6 +78,7 @@ public class SLList
 	/* Remove the last node of the list */
 	public void removeLast()
 	{
+		if (isEmpty()) return;
 		IntNode p = sentinel;
 		while (p.next.next != null)
 		{
@@ -92,9 +94,16 @@ public class SLList
 		return size;
 	}
 
-	/* Insert a node in the position of list */
-	public void insert(int item, int position)
+	public boolean isEmpty()
 	{
+		return sentinel.next == null;
+	}
+
+	/* Insert a node in the position of list */
+	public void insert(Item item, int position)
+	{
+		if (position < 0) throw new IllegalArgumentException();
+		if (position > size) position = size;
 		IntNode currentP = sentinel;
 		int index = 0;
 		while (index < position)
@@ -102,8 +111,7 @@ public class SLList
 			currentP = currentP.next;
 			index += 1;
 		}
-		IntNode insetNode = new IntNode(item, currentP.next);
-		currentP.next = insetNode;
+		currentP.next = new IntNode(item, currentP.next);
 	}
 
 	/* Reverse the node of list , method 1 , put every node front of the first node */

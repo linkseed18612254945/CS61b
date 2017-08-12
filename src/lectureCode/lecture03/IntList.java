@@ -44,7 +44,7 @@ public class IntList
 	}
 
 	public int iterGet(int i)
-	{	
+	{
 		int index = 0;
 		IntList p = this;
 		while (index != i)
@@ -60,10 +60,9 @@ public class IntList
 	{	
 		if (L == null)
 		{
-			return L;
+			return null;
 		}
-		IntList incr = new IntList(L.first + x, incrList(L.rest, x));
-		return incr;
+		return new IntList(L.first + x, incrList(L.rest, x));
 	}
 
 	/* Return the intlist decrement by int x */

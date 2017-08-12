@@ -24,8 +24,7 @@ public class LinkedListDoubleDeque<obj>
 	public LinkedListDoubleDeque()
 	{
 		size = 0;
-		obj empty = null;
-		sentinel = new Node(empty, null, null);
+		sentinel = new Node(null, null, null);
 		sentinel.prior =sentinel;
 		sentinel.next = sentinel;
 	}
@@ -146,4 +145,11 @@ public class LinkedListDoubleDeque<obj>
 		}
 		return returnString;
 	}
+
+	public static void main(String[] args)
+	{
+		LinkedListDoubleDeque<Integer> x = new LinkedListDoubleDeque<>();
+		x.addFirst(1);
+	}
 }
+

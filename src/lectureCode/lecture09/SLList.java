@@ -1,6 +1,6 @@
 package lectureCode.lecture09;
 
-public class SList<obj> implements List61B<obj>
+public class SLList<obj> implements List61B<obj>
 {	
 	public class Node
 	{
@@ -21,7 +21,7 @@ public class SList<obj> implements List61B<obj>
 
 
 	/* Constructor of list with empty or one node */ 
-	public SList()
+	public SLList()
 	{
 		size = 0;
 		obj empty = null;
@@ -30,7 +30,7 @@ public class SList<obj> implements List61B<obj>
 		sentinel.next = sentinel;
 	}
 
-	public SList(obj x)
+	public SLList(obj x)
 	{
 		size = 0;
 		sentinel = new Node(x, null, null);
@@ -77,8 +77,7 @@ public class SList<obj> implements List61B<obj>
 		{
 			return null;
 		}
-		obj firstItem = sentinel.next.item;
-		return firstItem;
+		return sentinel.next.item;
 	}
 
 	/* Adds an item to the end of the list */

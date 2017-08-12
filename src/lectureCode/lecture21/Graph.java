@@ -12,11 +12,13 @@ public class Graph
     private String[] labels;
     private int[][] edges;
     private int[] marks;
+    private int edgeNumber;
     private ArrayList<Integer>[] linkPresentEdge;
 
     public Graph(int V)
     {
         verticeNumber = V;
+        edgeNumber = 0;
         labels = new String[V];
         edges = new int[V][V];
         linkPresentEdge = (ArrayList<Integer>[]) new ArrayList[V];
@@ -29,9 +31,8 @@ public class Graph
     public void addEdge(int v, int w)
     {
         edges[v][w] = 1;
-        edges[w][v] = 1;
         linkPresentEdge[v].add(w);
-        linkPresentEdge[w].add(v);
+        edgeNumber += 1;
     }
 
     public Iterable<Integer> adjByMatrix(int v)
@@ -92,14 +93,25 @@ public class Graph
     }
 
 
+    public int getVerticeNumber()
+    {
+        return verticeNumber;
+    }
+
     public static void main(String[] args)
     {
-        Graph g = new Graph(5);
-        g.addEdge(1, 2);
-        g.addEdge(2, 3);
+        Graph g = new Graph(8);
+        g.addEdge(0, 1);
+        g.addEdge(0, 3);
         g.addEdge(3, 4);
-        g.addEdge(3, 0);
-        System.out.println(g.havePath(4, 0));
+        g.addEdge(1, 4);
+        g.addEdge(4, 7);
+        g.addEdge(2, 3);
+        g.addEdge(2, 5);
+        g.addEdge(5, 6);
+        g.addEdge(5, 4);
+        DepthFirstOrder p = new DepthFirstOrder(g);
+        System.out.println(p.reversePostOrder());
     }
 
 }

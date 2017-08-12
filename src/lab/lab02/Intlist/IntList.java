@@ -9,14 +9,10 @@ import java.util.Formatter;
  *         [Do not modify this file.]
  */
 public class IntList {
-    /**
-     * First element of list.
-     */
+     //First element of list.
     public int first;
-    /**
-     * Remaining elements of list.
-     */
-    public IntList rest;
+     //Remaining elements of list.
+    private IntList rest;
 
     /**
      * A List with first FIRST0 and rest REST0.
